@@ -19,7 +19,10 @@
 // Output: [3,5,2,6,1]
 
 // Follow up: Recursive solution is trivial, could you do it iteratively?
-
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
 // 前序遍历这个逻辑无法直接应用到中序遍历上:
 
 // var preorderTraversal = function (root) {
@@ -49,8 +52,6 @@
 // 所以要将访问的节点放入栈中，把要处理的节点也放入栈中但是要做标记，
 // 标记就是要处理的节点放入栈之后，紧接着放入一个空指针
 
-
-
 var inorderTraversal = function (root) {
     if (!root) {
         return []
@@ -69,7 +70,6 @@ var inorderTraversal = function (root) {
     }
     return res
 }
-
 
 // var inorderTraversal = function (root) {
 //     let res = []
